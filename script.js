@@ -4,9 +4,9 @@ const div = document.querySelector(".list");
 
 const h = document.querySelector("h1");
 const clearbtn = document.createElement("button");
-// clearbtn.textContent = "Clear"
-// h.appendChild(clearbtn);
-// h.style.paddingLeft = "520px";
+clearbtn.textContent = "Clear"
+h.appendChild(clearbtn);
+h.style.paddingLeft = "520px";
 
 let database;
 
@@ -54,10 +54,10 @@ addbtn.addEventListener("click", () => {
         localStorage.setItem("dataList", JSON.stringify(dataList));
     });
 
-    // clearbtn.addEventListener("click", () => {
-    //     localStorage.clear();
-    //     div.remove()
-    // })
+    clearbtn.addEventListener("click", () => {
+        localStorage.clear();
+        div.remove()
+    })
 
     let dataList = JSON.parse(localStorage.getItem("dataList")) || [];
     dataList.push(access);
@@ -115,10 +115,10 @@ window.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem("dataList", JSON.stringify(dataList));
         });
 
-        // clearbtn.addEventListener("click", () => {
-        //     localStorage.clear();
-        //     div.remove();
-        // });
+        clearbtn.addEventListener("click", () => {
+            localStorage.clear();
+            div.remove();
+        });
 
         h1.appendChild(editbtn);
         h1.appendChild(rembtn);
