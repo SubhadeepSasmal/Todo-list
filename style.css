@@ -1,9 +1,104 @@
-*{
+/* Basic reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
 }
-#text{
-    width: 40%;
-    margin-top: 15px;
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Label styling */
+label {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Input styling */
+input[type="text"] {
+    padding: 10px;
+    width: 80%;
+    max-width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* To-do item styling */
+.list h1 {
+    background-color: white;
+    border: 2px solid #ccc;
+    padding: 15px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Button styling for edit and remove inside to-do item */
+.list h1 button {
+    background-color: #28a745;
+    margin-left: 10px;
+}
+
+.list h1 button:nth-child(3) {
+    background-color: #dc3545;
+}
+
+.list h1 button:hover {
+    background-color: #218838;
+}
+
+.list h1 button:nth-child(3):hover {
+    background-color: #c82333;
+}
+
+/* Adjust padding and margin for smaller screens */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    input[type="text"], .list h1 {
+        width: 100%;
+    }
+
+    .list h1 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .list h1 button {
+        margin-left: 0;
+        margin-top: 10px;
+    }
 }

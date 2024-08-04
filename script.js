@@ -6,7 +6,6 @@ const h = document.querySelector("h1");
 const clearbtn = document.createElement("button");
 clearbtn.textContent = "Clear"
 h.appendChild(clearbtn);
-h.style.paddingLeft = "520px";
 
 let database;
 
@@ -66,9 +65,6 @@ addbtn.addEventListener("click", () => {
     h1.appendChild(editbtn);
     h1.appendChild(rembtn);
 
-    h1.style.border = "2px solid black";
-    h1.style.width = "50%";
-    h1.style.margin = "20px 0 0 45px";
     div.appendChild(h1);
 });
 
@@ -123,9 +119,6 @@ window.addEventListener('DOMContentLoaded', () => {
         h1.appendChild(editbtn);
         h1.appendChild(rembtn);
 
-        h1.style.border = "2px solid black";
-        h1.style.width = "50%";
-        h1.style.margin = "20px 0 0 45px";
         div.appendChild(h1);
     });
 });
